@@ -1,0 +1,5 @@
+ID;NOMBRE
+5;Antioquia
+1000;Otros
+11;Bogota D.C.
+25;Cundinamarca

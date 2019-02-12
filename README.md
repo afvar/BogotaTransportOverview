@@ -22,5 +22,5 @@ To see the results you must do the following steps:</p>
     </ol>
   </li>
   <br>
-  <li>Download all the files in this repository.</li>
+  <li>Download all the files of this repository in your machine.</li>
 <ol>

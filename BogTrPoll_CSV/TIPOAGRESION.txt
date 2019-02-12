@@ -1,0 +1,10 @@
+ID;DESCRIPCION
+-1;-
+1;Robo sin darse cuenta
+2;Atraco con violencia
+3;Rapazon
+4;Paseo millonario
+5;Ataque con escopolamina
+6;Agresión verbal
+7;Agresión fisica
+8;Agresión sexual

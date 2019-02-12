@@ -1,0 +1,6 @@
+ID;DESCRIPCION
+-1;-
+1;Para automovil
+2;Para Moto
+3;Para otros vehiculos
+4;No tiene licencia de conduccion.

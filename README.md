@@ -23,4 +23,6 @@ To see the results you must do the following steps:</p>
   </li>
   <br>
   <li>Download all the files of this repository in your machine.</li>
+  <br>
+  <li>Open the file in "...\BogotaTransportOverview\BogTrPoll_DataBase\Script\SQLQueryDB.sql" and change the directory in line 23 by the     directory in your machine. Select all the query and execute it with F5. Then you have created the database in your repository.</li>
 <ol>

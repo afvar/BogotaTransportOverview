@@ -1,8 +1,0 @@
-CODIGO;DEFINICION
-4;Se niega a responder la encuesta
-3;Informante no idóneo (menor, anciano,etc.)
-2;Lote/Casa Vacía/No Residencial
-7;Encuesta Efectiva
-1;No abren - No Atienden
-6;Otra causa
-5;Abandono

@@ -24,5 +24,13 @@ To see the results you must do the following steps:</p>
   <br>
   <li>Download all the files of this repository in your machine.</li>
   <br>
-  <li>Open the file in "...\BogotaTransportOverview\BogTrPoll_DataBase\Script\SQLQueryDB.sql" and change the directory in line 23 by the     directory in your machine. Select all the query and execute it with F5. Then you have created the database in your repository.</li>
+  <li>Open the file in "...\BogotaTransportOverview\BogTrPoll_DataBase\Script\SQLQueryDB.sql" and do the following steps:
+    <ul>
+      <li>Log to the server "(LocalDb)\BogTrPoll" (Server Name: (LocalDb)\BogTrPoll)</li>
+      <li>Select "Windows Authentication"</li>
+      <li>Click in Connect</li>
+      <li>Change the directory in line 23 by the project directory of your machine.</li>
+      <li>Select all the query and execute it with F5. Then you have created the database in your repository.</li>
+      <li>Close SQL Management Studio</li>
+    </ul>
 <ol>

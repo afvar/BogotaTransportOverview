@@ -20,7 +20,7 @@ BEGIN
 END
 GO
 
-DECLARE @project_directory NVARCHAR(200) = 'D:\Documents\BogotaTransportOverview\' -- Change this location to your project folder ubication
+DECLARE @project_directory NVARCHAR(200) = 'C:\Users\felip\Documents\BogotaTransportOverview\' -- Change this location to your project folder ubication
 
 EXEC (N'CREATE DATABASE BogTrPoll
 	ON PRIMARY (NAME = N''BogTrPoll'', FILENAME = N''' + @project_directory + N'BogTrPoll_DataBase\Database\bogtrpoll.mdf'')
@@ -989,493 +989,56 @@ CREATE TABLE NOEFECTIVAS
 GO
 
 
---Insert the values
+--Insert Values
 
-INSERT INTO ACTIVIDAD (ID, ACTIVIDAD_PRINCIPAL)
-VALUES
-(8, ''),
-(-1, '-'),
-(4, 'Estudia y trabaja'),
-(89, 'Otra Actividad'),
-(7, 'Pensionado / jubilado'),
-(6, 'Esta incapacitado permanentemente para trabajar'),
-(5, 'Oficios del Hogar'),
-(3, 'Estudia'),
-(2, 'Busca Trabajo'),
-(1, 'Trabajar')
-GO
-
-INSERT INTO ACTIVIDADECONOMICA (ID, ACTIVIDAD_ECONOMICA)
-VALUES
-(9, 'Transporte, almacenamiento y comunicaciones'),
-(16, 'Hogares privados con servicio domestico'),
-(89, 'Otra Actividad'),
-(7, 'Comercio al por mayor y al por menor de vehículos auto-motores, motocicletas, efectos personales y enseres y de alquiler'),
-(17, 'Organizaciones y Órganos extraterritoriales'),
-(6, 'Construccin'),
-(0, '--'),
-(10, 'Intermediación financiera'),
-(2, 'Pesca'),
-(8, 'Hoteles y Restaurantes'),
-(11, 'Actividades inmobiliarias, empresariales y de alquiler'),
-(4, 'Industrias manufactureras'),
-(12, 'Administración pública y defensa'),
-(14, 'Servicios sociales y de salud'),
-(-1, '-'),
-(5, 'Suministro de electricidad, gas y agua'),
-(13, 'Educación'),
-(15, 'Otras actividades de servicios comunitarios, sociales y personales'),
-(1, 'Agricultura ganaderia '),
-(3, 'explotacion de minas')
-GO
-
-INSERT INTO AGRESIONFISICA (ID, DESCRIPCION)
-VALUES
-(1, 'Golpes'),
-(5, 'Otros'),
-(-1, '-'),
-(3, 'Empujones'),
-(2, 'Jalones de Pelo'),
-(4, 'Pisoteos')
-GO
-
-INSERT INTO AGRESIONSEXUAL (ID, DESCRIPCION)
-VALUES
-(4, 'Por no aceptación de su identidad sexual o de género'),
-(-1, '-'),
-(1, 'Agresión Verbal (insultos, palabras obscenas, piropos)'),
-(3, 'Abuso Sexual (violación, manoseos, restregadas)'),
-(2, 'Agresión no Verbal (miradas obscenas, silbido, actos de exhibicionismo, actos de masturbación)')
-GO
-
-INSERT INTO BENEFICIOSITP (ID, DESCRIPCION)
-VALUES
-(1, 'Persona en condicion de discapacidad'),
-(2, 'Adulto Mayor mas de 62 años'),
-(-1, '-'),
-(4, 'Ninguno'),
-(0, '--'),
-(3, 'Personas mayores de 16 años con puntaje entre o ')
-GO
-
-INSERT INTO CONTACTOS (CODIGO, DEFINICION)
-VALUES
-(4, 'Se niega a responder la encuesta'),
-(3, 'Informante no idóneo (menor, anciano,etc.)'),
-(2, 'Lote/Casa Vacía/No Residencial'),
-(7, 'Encuesta Efectiva'),
-(1, 'No abren - No Atienden'),
-(6, 'Otra causa'),
-(5, 'Abandono')
-GO
-
-INSERT INTO CULTURA (ID, CULTURA)
-VALUES
-(-1, '-'),
-(1, 'Indigena'),
-(2, 'Gitano'),
-(3, 'Raizal del Archipielago'),
-(4, 'Palenquero'),
-(5, 'Negro, Mulato'),
-(6, ''),
-(90, 'Ninguno')
-GO
-
-INSERT INTO CURSOLICENCIA (ID, DESCRIPCION)
-VALUES
-(2, 'Para moto'),
-(4, 'No hizo curso.'),
-(-1, '-'),
-(1, 'Para automovil'),
-(3, 'Para otros vehiculos')
-GO
-
-INSERT INTO DEPARTAMENTO (ID, NOMBRE)
-VALUES
-(5, 'Antioquia'),
-(1000, 'Otros'),
-(11, 'Bogota D.C.'),
-(25, 'Cundinamarca')
-GO
-
-INSERT INTO EXENTO_PP (ID, DESCRIPCION)
-VALUES
-(0, '--'),
-(-1, 'vacio'),
-(3, 'Discapacidad fisica'),
-(4, 'Empresa de servicios publicos'),
-(5, 'Control de traifco y gruas'),
-(6, 'Control de emisiones'),
-(7, 'Blindaje'),
-(8, 'Servicios de escolta'),
-(9, 'Carroza funebre'),
-(10, 'Transporte especial'),
-(11, 'Emergencias'),
-(89, 'otro'),
-(1, 'Cuerpo Diplomatico'),
-(2, 'Fuerzas militares y policia'),
-(12, '')
-GO
-
-INSERT INTO LICENCIACONDUCCION (ID, DESCRIPCION)
-VALUES
-(-1, '-'),
-(1, 'Para automovil'),
-(2, 'Para Moto'),
-(3, 'Para otros vehiculos'),
-(4, 'No tiene licencia de conduccion.')
-GO
-
-INSERT INTO LIMITACIONFISICA (ID, LIMITACION)
-VALUES
-(1, 'Moverse (Utiliza Silla de ruedas)'),
-(2, 'Moverse (utiliza Muletas, caminadores, baston, etc.)'),
-(3, 'Moverse por enanismo.'),
-(4, 'Moverse por obesidad.'),
-(5, 'Oir, aun utilizando aparatos especiales.'),
-(6, 'Ver, aun utilizando lentes.'),
-(7, 'Hablar y/o comunicarse.'),
-(-1, '-'),
-(89, '')
-GO
-
-INSERT INTO LOCALIDAD (ID, NOMBRE)
-VALUES
-(1, '01 Usaquen'),
-(2, '02 Chapinero'),
-(3, '03 Santafe'),
-(4, '04 San Cristobal'),
-(5, '05 Usme'),
-(6, '06 Tunjuelito'),
-(7, '07 Bosa'),
-(8, '08 Kennedy'),
-(9, '09 Fontibon'),
-(10, '10 Engativa'),
-(11, '11 Suba'),
-(12, '12 Barrios Unidos'),
-(13, '13 Teusaquillo'),
-(14, '14 Los Martires'),
-(15, '15 Antonio Narino'),
-(16, '16 Puente Aranda'),
-(17, '17 La Candelaria'),
-(18, '18 Rafael Uribe Uribe'),
-(19, '19 Ciudad Bolivar'),
-(99, 'No aplica'),
-(20, '20 Sumapaz')
-GO
-
-INSERT INTO LUGARAGRESION (ID, DESCRIPCION)
-VALUES
-(-1, '-'),
-(1, 'En bus de Trasmilenio'),
-(2, 'En Bus de SITP'),
-(3, 'En un bus / Buseta / Microbus Tradicional'),
-(4, 'En un taxi'),
-(5, 'En un bicitaxi'),
-(6, 'En un moto taxi'),
-(7, 'En un bus intermunicipal'),
-(8, 'Al interior del vehiculo particular'),
-(9, 'En la calle'),
-(11, 'Paraderos'),
-(12, 'En los puentes peatonales.'),
-(13, 'En alimentador'),
-(14, 'En otro sitio'),
-(10, 'En una estacion o portal de Trasmilenio')
-GO
-
-INSERT INTO LUGARPARQUEO (ID, DESCRIPCION)
-VALUES
-(1, 'Garaje/parqueadero propio'),
-(2, 'Parqueadero comunal'),
-(3, 'Parqueadero privado'),
-(4, 'Parqueadero Publico'),
-(5, 'En via publica')
-GO
-
-INSERT INTO MEDIO_PREDOMINANTE (CODIGO, NOMBRE, PREDOMINANCIA)
-VALUES
-('7', 'Transmilenio', 1),
-('3 4 5 6', 'TPC-SITP', 2),
-('9', 'INTERMUNICIPAL', 3),
-('2', 'ALIMENTADOR', 4),
-('1', 'TAXI', 5),
-('26 27', 'AUTO', 6),
-('24 25', 'MOTO', 7),
-('8 14 15 16', 'OTROS', 12),
-('28 11 12 13', 'ESPECIAL', 8),
-('17 18 19 20 21', 'ILEGAL', 9),
-('29', 'PEATON', 13),
-('22 10 13', 'BICICLETA, BICICLETA CON MOTOR', 10)
-GO
-
-INSERT INTO MEDIOTRASPORTE (ID, DESCRIPCION)
-VALUES
-(-1, '-'),
-(90, 'Ninguno.'),
-(1, 'Taxi'),
-(2, 'Bus alimentador'),
-(7, 'Troncal Transmilenio/ Buses Duales'),
-(8, 'Tren'),
-(9, 'Transporte intermunicipal'),
-(16, 'Otro'),
-(17, 'Mototaxi'),
-(18, 'Bicitaxi'),
-(20, 'Auto Informal'),
-(21, 'Transporte Especial informal (sin contrato)'),
-(22, 'Bicicleta'),
-(23, 'Bicicleta con motor'),
-(24, 'Moto como conductor'),
-(25, 'Moto como pasajero'),
-(28, 'Bus privado'),
-(29, 'A pie'),
-(3, 'Publico tradicional (Bus, Buseta, Microbus / Colectivo)'),
-(4, 'SITP - Urbano (Azul)'),
-(5, 'SITP - Complementario (Naranja)'),
-(6, 'SITP -  Especial (Vinotinto)'),
-(10, 'Bicicletas publicas'),
-(12, 'Transporte Especial - Empresarial/ Turismo (Automovil, camioneta, campero)'),
-(13, 'Transporte Especial Empresarial/ Turismo (Bus, buseta y microbus)'),
-(15, 'Camion'),
-(19, 'Taxi  colectivo'),
-(26, 'Vehiculo privado como conductor'),
-(27, 'Vehiculo privado como pasajero'),
-(11, 'Vehiculo escolar'),
-(14, 'Vehiculo de traccion animal (aplica solo para municipios)')
-GO
-
-INSERT INTO MOTIVONOVEHICULO (ID, DESCRIPCION)
-VALUES
-(1, 'No tiene Automovil.'),
-(3, 'Inaccesibilidada de estacionamiento.'),
-(5, 'Pico y Placa.'),
-(6, 'Inseguridad'),
-(7, 'Comodidad'),
-(8, 'Costos'),
-(89, 'Otros'),
-(-1, '-'),
-(2, 'No habia automovil disponible'),
-(4, 'Congestion de trafico')
-GO
-
-INSERT INTO MOTIVOVIAJE (ID, DESCRIPCION)
-VALUES
-(1, 'Trabajar'),
-(2, 'Asuntos de Trabajo'),
-(3, 'Estudiar'),
-(4, 'Recibir atencion en salud'),
-(5, 'Ir a ver a alguien'),
-(6, 'Volver a casa'),
-(89, 'Otra cosa'),
-(14, 'Buscar trabajo'),
-(13, 'Recreacion'),
-(12, 'Tramites'),
-(11, 'Compras'),
-(10, 'Comer / Tomar algo'),
-(9, 'Buscar/dejar dejar algo'),
-(8, 'Buscar / dejar a alguien que no esta bajo su cuidado'),
-(7, 'Buscar / Dejar alguien bajo su cuidado')
-GO
-
-INSERT INTO MUNICIPIO (ID, ID_DEPARTAMENTO, NOMBRE, CODIGO_DANE)
-VALUES
-(-1, NULL, 'No aplica', NULL),
-(1, 11, 'BOGOTA-DC 11001', '11001'),
-(2, 25, 'BOJACA-cundinamarca 25099', '25099'),
-(3, 25, 'CAJICA-cundinamarca 25126', '25126'),
-(4, 25, 'CHIA-cundinamarca 25175', '25175'),
-(5, 25, 'COTA-cundinamarca 25214', '25214'),
-(6, 25, 'FACATATIVA-cundinamarca 25269', '25269'),
-(7, 25, 'FUNZA-cundinamarca 25286', '25286'),
-(8, 25, 'GACHANCIPA-cundinamarca 25295', '25295'),
-(9, 25, 'LA CALERA 25377', '25377'),
-(10, 25, 'MADRID-cundinamarca 25430', '25430'),
-(12, 25, 'SIBATE-cundinamarca 25740', '25740'),
-(13, 25, 'SOACHA-cundinamarca 25754', '25754'),
-(14, 25, 'SOPO-cundinamarca 25758', '25758'),
-(15, 25, 'TABIO-cundinamarca 25785', '25785'),
-(16, 25, 'TENJO-cundinamarca 25799', '25799'),
-(17, 25, 'TOCANCIPA-cundinamarca 25817', '25817'),
-(18, 25, 'ZIPAQUIRA-cundinamarca 25899', '25899'),
-(11, 25, 'MOSQUERA-cundinamarca 25473', '25473'),
-(19, 1000, 'Otro', NULL)
-GO
-
-INSERT INTO NIVELEDUCATIVO (ID, NIVEL_EDUCATIVO)
-VALUES
-(1, 'Preescolar'),
-(2, 'Primaria incompleta'),
-(3, 'Primaria Completa'),
-(4, 'Media incompleta'),
-(5, 'Media Completa'),
-(6, 'Tecnico Tegnologico incompleto'),
-(7, 'Tecnico Tegnologo completo'),
-(8, 'Pregrado incompleto'),
-(9, 'Pregrado completo'),
-(10, 'Postgreado incompleto'),
-(11, 'Postgrado Completo'),
-(12, 'Ninguno')
-GO
-
-INSERT INTO NOBICICLETA (ID, DESCRIPCION)
-VALUES
-(2, 'No tiene bicicleta'),
-(1, 'Largos trayectos'),
-(3, 'Le teme a sufrir un robo'),
-(4, 'Le teme a sufrir un accidente de transito'),
-(12, 'Le da pereza'),
-(17, 'Otro'),
-(-1, 'NA'),
-(5, 'Inadecuada infraestructura vial'),
-(6, 'Mal estado del tiempo'),
-(7, 'Geografía de la ciudad inaccesible'),
-(8, 'No le gustaría llegar sudando al trabajo'),
-(9, 'Inadecuada vestimenta para montar una bicicleta'),
-(10, 'No sabe montar en bicicleta'),
-(11, 'No le interesa montar en bicicleta'),
-(13, 'Tiene un estado o condición física que se lo impide'),
-(14, 'Usar bicicleta refleja un bajo estatus social'),
-(15, 'Por temor a ser agredido por su identidad sexual o de género'),
-(16, 'Por salud')
-GO
-
-INSERT INTO PARENTESCO (ID, NOMBRE)
-VALUES
-(1, 'jefe'),
-(3, 'Hijos'),
-(4, 'Nietos'),
-(5, 'Padres'),
-(6, 'Hermanos'),
-(7, 'Yerno o Nuera'),
-(8, 'Abuelos'),
-(9, 'Suegros'),
-(10, 'Tios'),
-(11, 'Sobrinos'),
-(12, 'Primos'),
-(14, 'Otros Parientes'),
-(15, 'No Parientes'),
-(13, 'Cunados'),
-(2, 'conyuge o companera(o)')
-GO
-
-INSERT INTO RANGOINGRESOS (ID, DESCRIPCION)
-VALUES
-(1, '$0 - 644.350'),
-(2, '$644.351 - $1.300.000'),
-(3, '$1.300.001 - $ 2.000.000'),
-(4, '$2.000.001 - $2.800.000'),
-(5, '$2.800.001 - $4.000.000'),
-(6, '$4.000.001 - $5.500.000'),
-(7, '$5.500.001 - $8.000.000'),
-(8, 'Mas de $8.000.000'),
-(9, 'NR')
-GO
-
-INSERT INTO SEXO (ID, SEXO)
-VALUES
-(1, 'Hombre'),
-(2, 'Mujer'),
-(-1, '-'),
-(0, '-')
-GO
-
-INSERT INTO TIPOAGRESION (ID, DESCRIPCION)
-VALUES
-(-1, '-'),
-(1, 'Robo sin darse cuenta'),
-(2, 'Atraco con violencia'),
-(3, 'Rapazon'),
-(4, 'Paseo millonario'),
-(5, 'Ataque con escopolamina'),
-(6, 'Agresión verbal'),
-(7, 'Agresión fisica'),
-(8, 'Agresión sexual')
-GO
-
-INSERT INTO TIPOCOMBUSTIBLE (ID, DESCRIPCION)
-VALUES
-(1, 'Solo gasolina'),
-(2, 'Diesel'),
-(3, 'Electrico'),
-(4, 'GNV'),
-(5, 'GNV y gasolina'),
-(6, 'Gasolina e hidrogeno'),
-(7, 'Electrico y gasolina')
-GO
-
-INSERT INTO TIPOVEHICULO (ID, DESCRIPCION)
-VALUES
-(1, 'Automovil'),
-(2, 'Campero'),
-(3, 'Pick Up'),
-(4, 'Moto'),
-(5, 'Taxi'),
-(6, 'Camion'),
-(7, 'Bicicleta a Motor (Adultos)'),
-(10, 'Vehiculo de traccion animal'),
-(90, 'Ninguno'),
-(89, 'Otro'),
-(12, 'Bicitaxi'),
-(8, 'Bus'),
-(9, 'Microbus colectivo'),
-(11, 'Bicicleta Ninos'),
-(13, 'Bicicletas sin motor (Adultos)')
-GO
-
-INSERT INTO TIPOVIVIENDA (ID, DESCRIPCION)
-VALUES
-(1, 'Casa'),
-(2, 'Apartamento'),
-(3, 'Cuarto'),
-(4, 'Vivienda Indigena'),
-(5, 'Otro tipo'),
-(0, '--'),
-(-1, '-')
-GO
-
-INSERT INTO TRABAJOACTIVIDAD (ID, NOMBRE)
-VALUES
-(-1, '-'),
-(1, 'Obrero'),
-(2, 'Obreo o empleado del gobierno'),
-(3, 'Empleado domestico.'),
-(4, 'Profesional independiente'),
-(5, 'Trabajador independiente'),
-(6, 'Patron o empleador.'),
-(7, 'Trabajador de finca, tierra ...'),
-(8, 'Trabajador sin remuneracion'),
-(9, 'Trabajador familiar sin remuneracion.'),
-(10, 'Jornalero o peon')
-GO
-
-INSERT INTO VIVIENDAPROPIA (ID, DESCRIPCION)
-VALUES
-(1, 'Propia, totalmente pagada'),
-(2, 'Propia, la estan pagando'),
-(3, 'En arriendo o subarriendo'),
-(4, 'En usufructo'),
-(5, 'Posesión sin titulo'),
-(0, '--'),
-(-1, '-')
-GO
-
-
---Bulk Processes
 
 CREATE TABLE INTERN_EXTERN_NAMES (rn INT, Intern NVARCHAR(100), Extern NVARCHAR(100))
 INSERT INTO INTERN_EXTERN_NAMES
 VALUES
-(1, 'DISPONIBILIDAD_VEHICULOS', 'DISPONIBILIDAD_VEHICULOS.csv'),
-(2, 'ENCUESTAS', 'ENCUESTAS_ANONIMIZADO.csv'),
-(3, 'ETAPAS1', 'ETAPAS1.csv'),
-(4, 'ETAPAS2', 'ETAPAS2.csv'),
-(5, 'MANZANAS_MUESTRA', 'MANZANAS_MUESTRA.csv'),
-(6, 'MANZANAS_TOTAL', 'MANZANAS_TOTAL.csv'),
-(7, 'NOEFECTIVAS', 'NOEFECTIVAS.csv'),
-(8, 'PERSONAS', 'PERSONAS_ANONIMIZADO.csv'),
-(9, 'VEHICULOS', 'VEHICULOS.csv'),
-(10, 'VIAJES1', 'VIAJES_ANONIMIZADOS1.csv'),
-(11, 'VIAJES2', 'VIAJES_ANONIMIZADOS2.csv'),
-(12, 'ZAT_LOCALIDAD', 'ZAT_LOCALIDAD.csv')
+(1, 'ACTIVIDAD', 'ACTIVIDAD.csv'),
+(2, 'ACTIVIDADECONOMICA', 'ACTIVIDADECONOMICA.csv'),
+(3, 'AGRESIONFISICA', 'AGRESIONFISICA.csv'),
+(4, 'AGRESIONSEXUAL', 'AGRESIONSEXUAL.csv'),
+(5, 'BENEFICIOSITP', 'BENEFICIOSITP.csv'),
+(6, 'CONTACTOS', 'CONTACTOS.csv'),
+(7, 'CULTURA', 'CULTURA.csv'),
+(8, 'CURSOLICENCIA', 'CURSOLICENCIA.csv'),
+(9, 'DEPARTAMENTO', 'DEPARTAMENTO.csv'),
+(10, 'DISPONIBILIDAD_VEHICULOS', 'DISPONIBILIDAD_VEHICULOS.csv'),
+(11, 'ENCUESTAS', 'ENCUESTAS_ANONIMIZADO.csv'),
+(12, 'ETAPAS1', 'ETAPAS1.csv'),
+(13, 'ETAPAS2', 'ETAPAS2.csv'),
+(14, 'EXENTO_PP', 'EXENTO_PP.csv'),
+(15, 'LICENCIACONDUCCION', 'LICENCIACONDUCCION.csv'),
+(16, 'LIMITACIONFISICA', 'LIMITACIONFISICA.csv'),
+(17, 'LOCALIDAD', 'LOCALIDAD.csv'),
+(18, 'LUGARAGRESION', 'LUGARAGRESION.csv'),
+(19, 'LUGARPARQUEO', 'LUGARPARQUEO.csv'),
+(20, 'MANZANAS_MUESTRA', 'MANZANAS_MUESTRA.csv'),
+(21, 'MANZANAS_TOTAL+ZAT_LOCALIDAD', 'MANZANAS_TOTAL+ZAT_LOCALIDAD.csv'),
+(22, 'MANZANAS_TOTAL', 'MANZANAS_TOTAL.csv'),
+(23, 'MEDIOTRASPORTE', 'MEDIOTRASPORTE.csv'),
+(24, 'MEDIO_PREDOMINANTE', 'MEDIO_PREDOMINANTE.csv'),
+(25, 'MOTIVONOVEHICULO', 'MOTIVONOVEHICULO.csv'),
+(26, 'MOTIVOVIAJE', 'MOTIVOVIAJE.csv'),
+(27, 'MUNICIPIO', 'MUNICIPIO.csv'),
+(28, 'NIVELEDUCATIVO', 'NIVELEDUCATIVO.csv'),
+(29, 'NOBICICLETA', 'NOBICICLETA.csv'),
+(30, 'NOEFECTIVAS', 'NOEFECTIVAS.csv'),
+(31, 'PARENTESCO', 'PARENTESCO.csv'),
+(32, 'PERSONAS', 'PERSONAS_ANONIMIZADO.csv'),
+(33, 'RANGOINGRESOS', 'RANGOINGRESOS.csv'),
+(34, 'SEXO', 'SEXO.csv'),
+(35, 'TIPOAGRESION', 'TIPOAGRESION.csv'),
+(36, 'TIPOCOMBUSTIBLE', 'TIPOCOMBUSTIBLE.csv'),
+(37, 'TIPOVEHICULO', 'TIPOVEHICULO.csv'),
+(38, 'TIPOVIVIENDA', 'TIPOVIVIENDA.csv'),
+(39, 'TRABAJOACTIVIDAD', 'TRABAJOACTIVIDAD.csv'),
+(40, 'VEHICULOS', 'VEHICULOS.csv'),
+(41, 'VIAJES1', 'VIAJES_ANONIMIZADOS1.csv'),
+(42, 'VIAJES2', 'VIAJES_ANONIMIZADOS2.csv'),
+(43, 'VIVIENDAPROPIA', 'VIVIENDAPROPIA.csv'),
+(44, 'ZAT_LOCALIDAD', 'ZAT_LOCALIDAD.csv')
 GO
 
 CREATE PROCEDURE OBT_INT (@rn INT, @result1 NVARCHAR(100) OUTPUT)
@@ -1488,29 +1051,31 @@ AS
 	SELECT @result2 = Extern FROM INTERN_EXTERN_NAMES WHERE rn = @rn
 GO
 
-CREATE PROCEDURE BULK_PROCESSES
-AS
-DECLARE @device_directory NVARCHAR(500)
-SELECT @device_directory = SUBSTRING([filename], 1, CHARINDEX(N'BogTrPoll_DataBase\Database\BogTrPoll.mdf', LOWER([filename])) - 1) + N'BogTrPoll_CSV\'
-FROM MASTER.DBO.SYSALTFILES
-WHERE [name] = 'BogTrPoll'
 
-DECLARE @n INT = 12
+DECLARE @device_directory NVARCHAR(500)
+DECLARE @n INT
 DECLARE @i INT = 1
 DECLARE @query_directory NVARCHAR(200)
 DECLARE @bulk_insert NVARCHAR(1000)
 DECLARE @external_source NVARCHAR(100)
 DECLARE @internal_source NVARCHAR(100)
 
+
+SELECT @n = COUNT(*) FROM INTERN_EXTERN_NAMES
+SELECT @device_directory = SUBSTRING([filename], 1, CHARINDEX(N'BogTrPoll_DataBase\Database\BogTrPoll.mdf', LOWER([filename])) - 1) + N'BogTrPoll_CSV\'
+FROM MASTER.DBO.SYSALTFILES
+WHERE [name] = 'BogTrPoll'
+
+
 WHILE @i <= @n  
 	BEGIN
 		EXEC OBT_EXT @i, @external_source OUTPUT
 		EXEC OBT_INT @i, @internal_source OUTPUT
 		SET @query_directory = @device_directory + @external_source
-		SET @bulk_insert = 'BULK INSERT ' + @internal_source + ' FROM ''' + @query_directory + '''WITH ( FIRSTROW = 2, FIELDTERMINATOR ='','', ROWTERMINATOR =''\n'' )'
-		EXEC(@bulk_insert)	
-
-		SET @i = @i +1
+		SET @bulk_insert = 'BULK INSERT ' + @internal_source + ' FROM ''' + @query_directory + '''WITH ( FIRSTROW = 2, FIELDTERMINATOR ='';'', ROWTERMINATOR =''\n'' )'
+		EXEC(@bulk_insert)
+		
+		SET @i = 1 + @i
 	END
 GO
 
@@ -1520,14 +1085,13 @@ AS
 EXEC('INSERT INTO ' + @Out_Tab + ' SELECT * FROM ' + @Tab1 + ' UNION SELECT * FROM ' + @Tab2)
 GO
 
-EXEC BULK_PROCESSES
+
 EXEC UNITE_TABLES @Tab1 = 'ETAPAS1', @Tab2 = 'ETAPAS2', @Out_tab = 'ETAPAS'
 EXEC UNITE_TABLES @Tab1 = 'VIAJES1', @Tab2 = 'VIAJES2', @Out_tab = 'VIAJES'
 
 
 DROP PROCEDURE OBT_INT
 DROP PROCEDURE OBT_EXT
-DROP PROCEDURE BULK_PROCESSES
 DROP TABLE ETAPAS1
 DROP TABLE ETAPAS2
 DROP TABLE VIAJES1

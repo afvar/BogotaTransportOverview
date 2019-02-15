@@ -1,9 +1,0 @@
-ID;CULTURA
--1;-
-1;Indigena
-2;Gitano
-3;Raizal del Archipielago
-4;Palenquero
-5;Negro, Mulato
-6;   
-90;Ninguno

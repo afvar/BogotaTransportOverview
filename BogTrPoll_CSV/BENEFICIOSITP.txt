@@ -1,7 +1,0 @@
-ID;DESCRIPCION
-1;Persona en condicion de discapacidad
-2;Adulto Mayor mas de 62 años
--1;-
-4;Ninguno
-0;--
-3;Personas mayores de 16 años con puntaje entre o 

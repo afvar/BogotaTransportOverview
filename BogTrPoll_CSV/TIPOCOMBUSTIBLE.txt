@@ -1,8 +1,0 @@
-ID;DESCRIPCION
-1;Solo gasolina
-2;Diesel
-3;Electrico
-4;GNV
-5;GNV y gasolina
-6;Gasolina e hidrogeno
-7;Electrico y gasolina

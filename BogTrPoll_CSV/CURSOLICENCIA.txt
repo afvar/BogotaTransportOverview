@@ -1,6 +1,0 @@
-ID;DESCRIPCION
-2;Para moto
-4;No hizo curso.
--1;-
-1;Para automovil
-3;Para otros vehiculos

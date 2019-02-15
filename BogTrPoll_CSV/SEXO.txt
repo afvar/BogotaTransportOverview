@@ -1,5 +1,0 @@
-ID;SEXO
-1;Hombre
-2;Mujer
--1;-
-0;-

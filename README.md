@@ -33,4 +33,6 @@ To see the results you must do the following steps:</p>
       <li>Select all the query and execute it with F5. Then you have created the database in your repository.</li>
       <li>Close SQL Management Studio</li>
     </ul>
+  </li>
+  <li>Execute the script in "Connection to DB.R" to do the backend processes</li>
 <ol>
